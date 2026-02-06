@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROXY STORE - Sanal Numara ve Sosyal Medya Hizmetleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splashScreen">
+        <h1 class="splash-logo">ROXY STORE</h1>
+        <p class="splash-slogan">Sanal Numara ve Sosyal Medya Hizmetlerinde Güvenilir Adres</p>
+    </div>
+
+    <!-- Header -->
+    <header id="mainHeader">
+        <div class="nav-container">
+            <a href="#" class="logo" data-page="home">
+                <i class="fas fa-store"></i> ROXY STORE
+            </a>
+            <button class="hamburger-menu" id="hamburgerMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo" data-page="home">
+                <i class="fas fa-store"></i> ROXY STORE
+            </a>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="sidebar-nav">
+            <ul>
+                <li><a href="#" class="active" data-page="home"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+                <li><a href="#" data-page="virtual-numbers"><i class="fas fa-phone-alt"></i> Sanal Numaralar</a></li>
+                <li><a href="#" data-page="social-media"><i class="fas fa-hashtag"></i> Sosyal Medya İşlemleri</a></li>
+                <li><a href="#" data-page="review"><i class="fas fa-star"></i> Değerlendirme Yap</a></li>
+                <li><a href="#" data-page="my-reviews"><i class="fas fa-comments"></i> Değerlendirmelerim</a></li>
+                <li><a href="#" data-page="all-reviews"><i class="fas fa-list"></i> Tüm Değerlendirmeler</a></li>
+                <!-- Admin Paneli Linki (Sadece admin giriş yapınca görünür) -->
+                <li id="adminMenuItem" style="display: none;">
+                    <a href="admin.html" target="_blank" onclick="return showAdminWarning()">
+                        <i class="fas fa-lock"></i> Admin Paneli
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section class="page active" id="home">
+            <div class="container">
+                <h2 class="page-title">Trend Hizmetler</h2>
+                <p class="page-subtitle">En çok tercih edilen hizmetlerimiz</p>
+                
+                <div class="services-grid">
+                    <!-- WhatsApp Global Service -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-title">
+                                <span>WhatsApp Global Numara</span>
+                                <span class="service-price">250₺</span>
+                            </div>
+                            <p class="service-slogan">Dünyanın her yerinden erişim</p>
+                        </div>
+                        <div class="service-body">
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Global kullanım</li>
+                                <li><i class="fas fa-check-circle"></i> 7/24 aktif</li>
+                                <li><i class="fas fa-check-circle"></i> SMS alabilme</li>
+                                <li><i class="fas fa-check-circle"></i> Hızlı aktivasyon</li>
+                            </ul>
+                            <button class="btn btn-purchase" data-service="WhatsApp Global Numara" data-price="250">Satın Al</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Instagram Followers Service -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-title">
+                                <span>Instagram 1.000 Takipçi</span>
+                                <span class="service-price">100₺</span>
+                            </div>
+                            <p class="service-slogan">Gerçek ve aktif takipçiler</p>
+                        </div>
+                        <div class="service-body">
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Gerçek kullanıcılar</li>
+                                <li><i class="fas fa-check-circle"></i> Yavaş ve güvenli artış</li>
+                                <li><i class="fas fa-check-circle"></i> Garantili hizmet</li>
+                                <li><i class="fas fa-check-circle"></i> 24 saat içinde teslimat</li>
+                            </ul>
+                            <button class="btn btn-purchase" data-service="Instagram 1.000 Takipçi" data-price="100">Satın Al</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Numbers Page -->
+        <section class="page" id="virtual-numbers">
+            <div class="container">
+                <h2 class="page-title">Sanal Numaralar</h2>
+                <p class="page-subtitle">Global ve yerel sanal numara hizmetlerimiz</p>
+                
+                <div class="services-grid">
+                    <!-- WhatsApp Global -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-title">
+                                <span>WhatsApp Global</span>
+                                <span class="service-price">250₺</span>
+                            </div>
+                            <p class="service-slogan">Tüm dünyada kullanılabilir</p>
+                        </div>
+                        <div class="service-body">
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Uluslararası kullanım</li>
+                                <li><i class="fas fa-check-circle"></i> SMS alma özelliği</li>
+                                <li><i class="fas fa-check-circle"></i> Uzun vadeli kullanım</li>
+                                <li><i class="fas fa-check-circle"></i> Hızlı kurulum</li>
+                            </ul>
+                            <button class="btn btn-purchase" data-service="WhatsApp Global" data-price="250">Satın Al</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Telegram Global -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-title">
+                                <span>Telegram Global</span>
+                                <span class="service-price">250₺</span>
+                            </div>
+                            <p class="service-slogan">Güvenli iletişim için</p>
+                        </div>
+                        <div class="service-body">
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Şifreli mesajlaşma</li>
+                                <li><i class="fas fa-check-circle"></i> Grup oluşturabilme</li>
+                                <li><i class="fas fa-check-circle"></i> Dosya paylaşımı</li>
+                                <li><i class="fas fa-check-circle"></i> Anlık aktivasyon</li>
+                            </ul>
+                            <button class="btn btn-purchase" data-service="Telegram Global" data-price="250">Satın Al</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Turkey Number -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-title">
+                                <span>Türkiye Numarası</span>
+                                <span class="service-price">500₺</span>
+                            </div>
+                            <p class="service-slogan">Yerel hizmetler için ideal</p>
+                        </div>
+                        <div class="service-body">
+                            <div class="warning-box">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <strong>Stok Uyarısı:</strong> Bu hizmet şu anda stoklarımızda bulunmamaktadır.
+                                </div>
+                            </div>
+                            <button class="btn btn-warning" disabled>Stokta Yok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Page -->
+        <section class="page" id="social-media">
+            <div class="container">
+                <h2 class="page-title">Sosyal Medya İşlemleri</h2>
+                <p class="page-subtitle">Instagram ve TikTok için takipçi ve beğeni hizmetleri</p>
+                
+                <div class="services-grid">
+                    <!-- Instagram/TikTok Followers -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-title">
+                                <span>1.000 Takipçi</span>
+                                <span class="service-price">100₺</span>
+                            </div>
+                            <p class="service-slogan">Instagram ve TikTok için</p>
+                        </div>
+                        <div class="service-body">
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Gerçek ve aktif kullanıcılar</li>
+                                <li><i class="fas fa-check-circle"></i> Güvenli artış</li>
+                                <li><i class="fas fa-check-circle"></i> Düşüş garantisi</li>
+                                <li><i class="fas fa-check-circle"></i> Hızlı teslimat</li>
+                            </ul>
+                            <button class="btn btn-purchase" data-service="1.000 Takipçi (Instagram/TikTok)" data-price="100">Satın Al</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Instagram/TikTok Likes -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-title">
+                                <span>10.000 Beğeni</span>
+                                <span class="service-price">900₺</span>
+                            </div>
+                            <p class="service-slogan">Gönderilerinize etkileşim</p>
+                        </div>
+                        <div class="service-body">
+                            <div class="warning-box">
+                                <i class="fas fa-info-circle"></i>
+                                <div>
+                                    <strong>Özel Sipariş:</strong> Bu paket için özel sipariş oluşturulmaktadır.
+                                </div>
+                            </div>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Yüksek kalite beğeniler</li>
+                                <li><i class="fas fa-check-circle"></i> Organik görünüm</li>
+                                <li><i class="fas fa-check-circle"></i> Yavaş ve güvenli artış</li>
+                            </ul>
+                            <button class="btn btn-purchase" data-service="10.000 Beğeni (Instagram/TikTok)" data-price="900">Satın Al</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review Form Page -->
+        <section class="page" id="review">
+            <div class="container">
+                <h2 class="page-title">Değerlendirme Yap</h2>
+                <p class="page-subtitle">Deneyimlerinizi bizimle paylaşın</p>
+                
+                <div class="review-form">
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label for="reviewerName">Ad Soyad *</label>
+                            <input type="text" id="reviewerName" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewerEmail">E-posta Adresi *</label>
+                            <input type="email" id="reviewerEmail" class="form-control" required>
+                            <small>E-posta adresiniz diğer kullanıcılarla paylaşılmayacaktır.</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewContent">Değerlendirmeniz *</label>
+                            <textarea id="reviewContent" class="form-control" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Değerlendirmeyi Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Reviews Page -->
+        <section class="page" id="my-reviews">
+            <div class="container">
+                <h2 class="page-title">Değerlendirmelerim</h2>
+                <p class="page-subtitle">Yaptığınız değerlendirmeler ve yanıtlar</p>
+                
+                <div id="userReviewsContainer">
+                    <p class="page-subtitle" style="text-align: center;">Değerlendirmelerinizi görmek için lütfen e-posta adresinizi girin:</p>
+                    
+                    <div class="review-form" style="max-width: 500px; margin: 0 auto 40px;">
+                        <div class="form-group">
+                            <label for="userEmailForReviews">E-posta Adresiniz</label>
+                            <input type="email" id="userEmailForReviews" class="form-control">
+                        </div>
+                        <button class="btn" id="loadUserReviews">Değerlendirmelerimi Görüntüle</button>
+                    </div>
+                    
+                    <div id="userReviewsList"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Reviews Page -->
+        <section class="page" id="all-reviews">
+            <div class="container">
+                <h2 class="page-title">Tüm Değerlendirmeler</h2>
+                <p class="page-subtitle">Müşterilerimizin deneyimleri</p>
+                
+                <div class="reviews-container" id="allReviewsList">
+                    <!-- Değerlendirmeler buraya yüklenecek -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Purchase Modal -->
+    <div class="modal-overlay" id="purchaseModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalServiceTitle">Satın Al</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <h4>Önemli Bilgi:</h4>
+                    <p>Web sitemiz üzerinden doğrudan satın alma işlemi bulunmamaktadır. Siparişleriniz için aşağıdaki iletişim kanallarımızdan bize ulaşabilirsiniz.</p>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp:</strong> +447795203704
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div>
+                            <strong>Telegram:</strong> @roxysatici
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="working-hours">
+                    <h4>Çalışma Saatleri:</h4>
+                    <p><strong>Hafta İçi:</strong> 17:00 - 00:00</p>
+                    <p><strong>Hafta Sonu:</strong> 7/24 Açığız</p>
+                    <p style="margin-top: 15px; color: #dc3545; font-weight: 600;">
+                        <i class="fas fa-exclamation-circle"></i> Ödeme yalnızca IBAN ile kabul edilmektedir.
+                    </p>
+                </div>
+                
+                <button class="btn" id="closeModalButton">Tamam</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ROXY STORE</h3>
+                    <p>Sanal numara ve sosyal medya hizmetlerinde güvenilir çözüm ortağınız.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Destek Hatları</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp:</strong> +447795203704
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <strong>Telegram:</strong> @roxysatici
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Çalışma Saatleri</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Hafta İçi:</strong> 17:00 - 00:00
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Hafta Sonu:</strong> 7/24
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 ROXY STORE. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
